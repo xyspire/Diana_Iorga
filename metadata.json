@@ -1,0 +1,6 @@
+{
+  "name": "Nyro Silvan Studio",
+  "description": "Premium creative portfolio with smooth Lenis scrolling, a customized interactive dot cursor, luxurious minimal layouts, and specialized responsive button components.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
