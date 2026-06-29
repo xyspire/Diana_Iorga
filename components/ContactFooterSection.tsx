@@ -141,7 +141,7 @@ export default function ContactFooterSection({ onScrollToTop }: ContactFooterSec
             <div className="col-span-12 lg:col-span-7 flex flex-col items-start justify-start gap-6 lg:pl-8">
               <h2 className="text-3xl w-[65%] sm:w-full sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-sans font-light leading-[1.08] tracking-tight text-white">
                 <TextAnimate animation="slideUp" by="word" duration={1.0}>
-                  Get in touch and let&apos;s turn concepts into stunning websites
+                  Get in touch and let&apos;s turn concepts into stunning designs.
                 </TextAnimate>
               </h2>
 
