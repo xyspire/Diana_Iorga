@@ -66,7 +66,7 @@ const SERVICES_ITEMS = [
     id: '09',
     title: 'Social Media Assets',
     description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    image: '/social.jpg',
     tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
   }
 ];
@@ -115,22 +115,6 @@ export default function ServicesSection() {
       <div className="w-full px-6  flex flex-col gap-12 sm:gap-16"
       >
 
-        {/* Background Gradient on the left side using herobg */}
-        <div className="absolute -right-[90vw] top-0 h-full w-full select-none pointer-events-none z-0 opacity-60">
-          <Image
-            fill
-            src="/herobg.jpeg"
-            alt=""
-            className="w-full h-full object-cover object-left select-none pointer-events-none filter blur-[15px] saturate-[140%] brightness-[1]"
-            referrerPolicy="no-referrer"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = "none";
-            }}
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-studio-dark/40 to-studio-dark pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-studio-dark via-transparent to-studio-dark pointer-events-none" />
-        </div>
 
         {/* Responsive Header Elements */}
         <div className="flex flex-col items-start gap-4 max-w-xl bg-studio-dark z-10">
@@ -218,7 +202,7 @@ export default function ServicesSection() {
                 y: smoothY,
                 rotate: smoothRot,
               }}
-              className="absolute w-[280px] md:w-[320px] lg:w-[360px] aspect-[4/5] overflow-hidden rounded-lg pointer-events-none origin-center -translate-x-1/2 -translate-y-1/2"
+              className="absolute w-[280px] md:w-[320px] lg:w-[360px] aspect-[5/3] overflow-hidden rounded-lg pointer-events-none origin-center -translate-x-1/2 -translate-y-1/2"
               initial={{
                 scale: 0.6,
                 opacity: 0,

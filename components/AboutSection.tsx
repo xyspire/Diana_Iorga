@@ -32,32 +32,34 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* Photo + Text side by side */}
-        <div className="flex flex-col md:flex-row gap-4 md:gap-5 items-stretch">
+        {/* Photo on top, Text below — full flex-col on every screen */}
+        <div className="flex flex-col gap-4">
 
-          {/* LEFT — Photo */}
+          {/* TOP — Photo (centered, fixed height, no border) */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full md:w-[44%] relative overflow-hidden rounded-sm border border-white/10 min-h-[420px] md:min-h-0"
+            className="flex justify-center"
           >
-            <img
-              src="/formal_photo.png"
-              alt="Diana Iorga"
-              className="absolute inset-0 w-full h-full object-cover object-top brightness-[0.85] saturate-[0.8]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-studio-dark/70 via-transparent to-transparent" />
+            <div className="relative w-[260px] sm:w-[320px] md:w-[380px] h-[340px] sm:h-[420px] md:h-[500px] overflow-hidden rounded-sm">
+              <img
+                src="/formal_photo.png"
+                alt="Diana Iorga"
+                className="w-full h-full object-cover object-top brightness-[0.88] saturate-[0.85] select-none"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-studio-dark/50 via-transparent to-transparent" />
+            </div>
           </motion.div>
 
-          {/* RIGHT — Text content */}
+          {/* BOTTOM — Text content */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1.0, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full md:w-[56%] flex flex-col justify-between border border-white/10 rounded-sm p-8 md:p-10 lg:p-14"
+            className="w-full flex flex-col justify-between rounded-sm p-8 md:p-10 lg:p-14"
           >
             {/* Main bio text */}
             <div className="flex flex-col gap-6">

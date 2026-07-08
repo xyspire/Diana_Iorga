@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: ' Diana Iorga® — Portfolio',
+  title: ' Diana Iorga — Portfolio',
   description: 'Graphic Designer — portfolio.',
 };
 

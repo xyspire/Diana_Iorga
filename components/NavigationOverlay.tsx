@@ -83,9 +83,7 @@ export default function NavigationOverlay({
             <div className="flex items-center gap-2">
               <span className="font-sans text-xl md:text-2xl font-normal tracking-tight text-white select-none">
                 Diana Iorga
-                <span className="text-xs align-super ml-0.5 font-light text-zinc-500">
-                  ®
-                </span>
+
               </span>
             </div>
 

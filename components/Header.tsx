@@ -66,9 +66,9 @@ export default function Header({ onMenuTrigger }: HeaderProps) {
           id="name"
         >
           Diana Iorga
-          <span className="text-[10px] md:text-xs align-super ml-0.5 font-light font-mono">
+          {/* <span className="text-[10px] md:text-xs align-super ml-0.5 font-light font-mono">
             ®
-          </span>
+          </span> */}
         </a>
       </motion.div>
 
