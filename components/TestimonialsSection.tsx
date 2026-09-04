@@ -220,7 +220,7 @@ export default function TestimonialsSection() {
         <div className="flex flex-col items-start gap-4 max-w-xl bg-studio-dark z-10">
           <div className="inline-flex items-center gap-2 px-3  py-1.5 rounded-full border border-white">
             <Spade className="w-3.5 h-3.5 text-white" />
-            <h2 className="text-xl font-mono tracking-widest text-white uppercase">SERVICES</h2>
+            <h2 className="text-xl font-mono tracking-widest text-white uppercase">TESTIMONIALS</h2>
           </div>
           <p className="text-xl sm:text-2xl md:text-3xl font-sans tracking-tight font-light text-white leading-tight">
              A few highlights from the amazing people I’ve had the chance to

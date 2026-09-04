@@ -9,51 +9,52 @@ const SERVICES_ITEMS = [
   {
     id: '01',
     title: 'Logo Design',
-    description: 'I design user-first interfaces for mobile apps, SaaS platforms, and dashboards — balancing usability with aesthetics. Every screen is purposeful, every flow frictionless.',
-    image: '/service_logo.jpg',
+    description: "A great logo is more than just a symbol - It's the anchor of your brand. I design unique visuals identities that tell your story and connect with your dream clients.",
+    image: '/logo.png',
     tags: ['Mobile Apps', 'SaaS', 'Dashboards', 'Aesthetics']
   },
   {
     id: '02',
     title: 'Product Design',
-    description: 'From landing pages to full websites — I craft sleek, high-converting web designs that capture attention and drive results.',
+    description: 'Where design meets technical execution. I specialize in the structural optimization and precise pre-press preparation of packaging, ensuring every fold, flap and layer is flawless before it hits the production line.',
     image: '/product_design.jpg',
     tags: ['Websites', 'Landing pages', 'Portfolio & personal sites']
   },
   {
     id: '03',
     title: 'Thumnail Design',
-    description: 'I help shape bold, cohesive identities that speak clearly and look sharp across every touchpoint.',
+    description: 'The best thumbnails tell a story in a single second. I design bold, well-composed layouts that capture the energy of your video and compel people to click play.',
     image: '/thumbnail.png',
     tags: ['Visual Identity', 'Styleguides', 'Typography', 'Logo Systems']
   },
   {
     id: '04',
     title: 'Music Album Design',
-    description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
+    description: 'Every track has a mood and every album tells a story. I design custom cover art that captures the exact energy, emotion and atmosphere of your music, giving your sound a powerful visual identity.',
     image: '/music.jpg',
     tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
   },
   {
     id: '05',
     title: 'Notebook Cover Design',
-    description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
+    description: 'Combining creative visual concepts with technical precision. I design notebook covers with the entire manufacturing and printing process in mind, ensuring the final physical product looks exactly as intended.',
     image: '/notebook.jpg',
     tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
   },
   {
     id: '06',
     title: 'Book Cover Design',
-    description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
+    description: "A book cover is an author's first handhsake with a reader. I design custom, compelling book covers that capture the heart of your manuscript, evoke the perfect mood, and immediately grab attention on a crowded shelf or a digital store.",
     image: '/book_cover.jpg',
     tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
   },
   {
     id: '07',
     title: '3D Modelling',
-    description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
+    description: 'Fueling creativity through 3D art. This section is dedicated to my personal artistic journey, exploring unique shapes, characters or envirnoments just for the love of the craft.',
     image: '/3d_model.jpg',
-    tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
+    tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance'],
+    vertical: true
   },
   {
     id: '08',
@@ -65,9 +66,10 @@ const SERVICES_ITEMS = [
   {
     id: '09',
     title: 'Social Media Assets',
-    description: 'I bring your designs to life in Framer — with animations, CMS integration, and performance optimization baked in.',
+    description: "Keeping your identity seamless across every platform. I design cohesive, high-quality social media assets - including banners, templates and post graphics - tailored to match your brand's visual guidelines perfectly.",
     image: '/social.jpg',
-    tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance']
+    tags: ['Web Animations', 'CMS Integration', 'SEO Optimized', 'Speed Performance'],
+    vertical: true
   }
 ];
 
@@ -202,7 +204,11 @@ export default function ServicesSection() {
                 y: smoothY,
                 rotate: smoothRot,
               }}
-              className="absolute w-[280px] md:w-[320px] lg:w-[360px] aspect-[5/3] overflow-hidden rounded-lg pointer-events-none origin-center -translate-x-1/2 -translate-y-1/2"
+              className={`absolute overflow-hidden rounded-lg pointer-events-none origin-center -translate-x-1/2 -translate-y-1/2 ${
+                SERVICES_ITEMS[hoveredIdx].vertical
+                  ? 'w-[220px] md:w-[250px] lg:w-[280px] aspect-[3/4]'
+                  : 'w-[280px] md:w-[320px] lg:w-[360px] aspect-[5/3]'
+              }`}
               initial={{
                 scale: 0.6,
                 opacity: 0,

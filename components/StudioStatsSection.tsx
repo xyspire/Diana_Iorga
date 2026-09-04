@@ -18,12 +18,12 @@ export default function StudioStatsSection() {
 
   return (
     <section
-      className="w-full min-h-[90vh] pt-28 px-6 z-10 bg-studio-dark"
+      className="w-full min-h-[70vh] pt-28 px-6 z-10 bg-studio-dark"
       id="studio-stats"
     >
 
       {/* Background Gradient on the left side using herobg */}
-      <div className="absolute left-0 top-0 h-full w-full select-none pointer-events-none z-0 opacity-60">
+      {/* <div className="absolute left-0 top-0 h-full w-full select-none pointer-events-none z-0 opacity-60">
         <img
           src="/herobg.jpeg"
           alt=""
@@ -36,7 +36,7 @@ export default function StudioStatsSection() {
 
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-studio-dark/40 to-studio-dark pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-studio-dark via-transparent to-studio-dark pointer-events-none" />
-      </div>
+      </div> */}
       {/*
         GlassFilter renders the SVG filter definition ONCE here.
         All LiquidButton instances in this section reference "lg-glass-filter".

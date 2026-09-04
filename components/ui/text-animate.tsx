@@ -45,7 +45,7 @@ export function TextAnimate({
 
   const itemVariants = {
     hidden: {
-      y: animation === 'slideUp' ? '110%' : 0,
+      y: animation === 'slideUp' ? '130%' : 0,
       opacity: animation === 'fadeIn' || animation === 'blurIn' ? 0 : 1,
       filter: animation === 'blurIn' ? 'blur(8px)' : 'none',
     },
@@ -62,7 +62,7 @@ export function TextAnimate({
 
   return (
     <motion.span
-      className={cn('inline-block overflow-hidden py-1.5', className)}
+      className={cn('inline-block py-1', className)}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -76,7 +76,7 @@ export function TextAnimate({
         }
 
         return (
-          <span key={index} className="inline-block overflow-hidden align-bottom">
+          <span key={index} className="inline-block overflow-hidden align-bottom pb-[0.35em] -mb-[0.35em] pt-[0.1em] -mt-[0.1em]">
             <motion.span
               className="inline-block whitespace-pre"
               variants={itemVariants}
