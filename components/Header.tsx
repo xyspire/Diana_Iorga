@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 import LineButton from "./LineButton";
 
 interface HeaderProps {
@@ -15,11 +16,9 @@ export default function Header({ onMenuTrigger }: HeaderProps) {
   const pathname = usePathname();
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
     if (pathname === "/") {
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      router.push("/");
     }
   };
 
@@ -32,13 +31,14 @@ export default function Header({ onMenuTrigger }: HeaderProps) {
       // Avoid bounce effect on iOS or overscroll behavior
       if (currentScrollY < 0) return;
 
-      if (currentScrollY <= 60) {
-        // Always show menu at the very top of the page
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY) {
+          setVisible(false);
+        } else {
+          setVisible(true);
+        }
+      } else {
         setVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setVisible(false); // Scrolling down
-      } else if (currentScrollY < lastScrollY) {
-        setVisible(true); // Scrolling up
       }
       lastScrollY = currentScrollY;
     };
@@ -59,7 +59,7 @@ export default function Header({ onMenuTrigger }: HeaderProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="pointer-events-auto">
-        <a
+        <Link
           href="/"
           onClick={handleLogoClick}
           className="font-sans text-lg md:text-4xl font-normal tracking-tight hover:opacity-85 transition-opacity"
@@ -69,7 +69,7 @@ export default function Header({ onMenuTrigger }: HeaderProps) {
           {/* <span className="text-[10px] md:text-xs align-super ml-0.5 font-light font-mono">
             ®
           </span> */}
-        </a>
+        </Link>
       </motion.div>
 
       <motion.div initial={{ opacity: 0, y: -40 }}

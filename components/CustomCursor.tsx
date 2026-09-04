@@ -45,7 +45,7 @@ export default function CustomCursor() {
     const moveCursor = (e: MouseEvent) => {
       mouseX.set(e.clientX - 6);
       mouseY.set(e.clientY - 6);
-      if (!isVisible) setIsVisible(true);
+      setIsVisible(true);
     };
 
     const handleMouseLeave = () => setIsVisible(false);
